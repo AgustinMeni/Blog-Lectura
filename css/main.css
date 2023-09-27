@@ -1,18 +1,46 @@
 *{
     box-sizing: border-box;
-    font-family: 'Work Sans';
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: #fff;
-    color: #000;
+    background-color: #f8f8f8;
+}
+#container{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px #cecece,
+                inset -4px -4px 6px #fff;
+    margin: 0px auto;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color: linear-gradient(145deg, #d8d8d8, #ffffff);
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #fff;
+}
+#container.active .toggle{
+    left: 40px;
+}
+body.active{
+    background-color: rgb(23, 23, 23);
 }
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
 }
 .logo {
@@ -20,47 +48,15 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
     gap: 20px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .logo a {
     text-decoration: none;
-    color: #333;
     max-height: 200px;
 }
 .logo img {
     max-width: 100%;
     height: auto;
-    display: block;
     margin: 0 auto;
     border-radius: 10px;
-}
-.containerLogo{
-    text-align: right;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-#modoBoton {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase; /* Texto en mayúsculas */
-    font-weight: bold; /* Texto en negrita */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-body.dark-mode {
-    background-color: #222;
-}
-#modoBoton.modo-oscuro-activado {
-    background-color: #fff;
-    color: #333; /* Cambio de color de texto */
-}
-#modoBoton .fa-regular.fa-moon {
-    background-color: white;
-}
-body.dark-mode #modoBoton .fa-regular.fa-moon {
-    background-color: black;
 }
