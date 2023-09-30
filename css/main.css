@@ -5,7 +5,20 @@
     padding: 0;
 }
 body {
-    background-color: #f8f8f8;
+    background-color: #fff;
+}
+.header{
+    padding: 10px 0;
+}
+.container{
+    display: flex;
+    justify-content: flex-end;
+}
+button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
 }
 .main {
     display: flex;
