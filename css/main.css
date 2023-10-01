@@ -6,6 +6,8 @@
 }
 body {
     background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: #212529;
@@ -44,18 +46,27 @@ header p {
 
 .logo {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
 }
 
 .logo a {
-    display: block;
+    display: inline-block;
     text-align: center;
     text-decoration: none;
+    margin-right: 10px;
 }
-
+.logo a:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.logo a:hover ~ a{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+}
 .logo img {
     max-width: 100%;
     height: auto;
