@@ -34,27 +34,37 @@ header a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    text-align: center;
 }
-
 .logo a {
     display: inline-block;
     text-align: center;
     text-decoration: none;
     margin-bottom: 10px;
 }
-.logo a:hover{
-    transform: scale(1.2);
-    cursor: pointer;
-}
-.logo a:hover ~ a{
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.3s, transform 0.3s;
-}
-.logo img {
+.logo-img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin: 0 auto;
     max-height: 300px;
+    transition: transform 0.3s;
+}
+.logo-img:hover {
+    transform: scale(0.9);
+}
+.logo-img:hover ~ .logo-img {
+    transform: scale(0.7);
+}
+@media (max-width: 768px) {
+    .logo a:hover {
+        transform: none;
+        cursor: pointer;
+    }
+
+    .logo a:hover ~ a {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
