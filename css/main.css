@@ -56,15 +56,11 @@ header a {
 .logo-img:hover ~ .logo-img {
     transform: scale(0.7);
 }
-@media (max-width: 768px) {
-    .logo a:hover {
-        transform: none;
-        cursor: pointer;
+@media (max-width: 767px){
+        .logo-img {
+            transition: none;
     }
-
-    .logo a:hover ~ a {
-        opacity: 1;
+    .logo-img:hover ~ .logo-img {
         transform: none;
-        transition: none;
     }
 }
